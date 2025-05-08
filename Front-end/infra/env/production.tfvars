@@ -1,0 +1,7 @@
+environment    = "production"
+log_level      = "info"
+aws_account_id = "767397783359"
+aws_region     = "ap-southeast-2"
+kms_key_id     = "arn:aws:kms:ap-southeast-2:767397783359:key/fab85c17-5b89-4ba5-a0cb-8fe6f5534e0b"
+ssl_cert_arn   = "arn:aws:acm:us-east-1:767397783359:certificate/cd076a18-3e3c-49f5-a08d-0edc5eef85ed"
+domain_name    = "app.passon.link"

@@ -1,0 +1,7 @@
+environment    = "test"
+log_level      = "debug"
+aws_account_id = "590183956525"
+aws_region     = "ap-southeast-2"
+kms_key_id     = "arn:aws:kms:ap-southeast-2:590183956525:key/5f175f07-9099-4cf1-8ef8-89aad5f9be97"
+ssl_cert_arn   = "arn:aws:acm:us-east-1:590183956525:certificate/916eed84-9f85-4067-8658-db83789c125c"
+domain_name    = "staging.passon.link"

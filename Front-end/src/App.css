@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-down.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 50;
+}
+
+.slide-down.closed {
+  transform: translateY(-0.5rem);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.slide-left {
+  transition: all 0.3s ease-in-out;
+}
+/* Initially small and hidden */
+/* .templateCard {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+} */
+
+/* Parent grid container transition */
+.zoom-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.zoom-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.zoom-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.zoom-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.templateCard {
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out; /* Transition on scale and opacity */
+}
+
+.templateCard-enter {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.templateCard-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.templateCard-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.templateCard-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.templateCard-appear {
+  opacity: 1;
+}
+
+.templateCard-appear.templateCard-appear-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.wrap-break-word {
+  overflow-wrap: break-word;
+}

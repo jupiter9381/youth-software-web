@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @apply cursor-pointer;
+}
+
+.react-colorful__last-control {
+  border-radius: 0px !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+@layer utilities {
+  @keyframes slide-in {
+    0% {
+      transform: translateX(30);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(30);
+      opacity: 0;
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.3s ease-in-out;
+  }
+
+  .animate-slide-out {
+    animation: slide-out 0.3s ease-in-out;
+  }
+}
+
+@layer components {
+  /* index.css or global.css */
+  h1 {
+    @apply text-[48px] leading-[50px] font-medium;
+  }
+
+  h2 {
+    @apply text-[34px] leading-[42px] font-medium;
+  }
+
+  h3 {
+    @apply text-[26px] leading-[34px] font-medium;
+  }
+
+  h4 {
+    @apply text-[20px] leading-[28px] font-medium;
+  }
+
+  h5 {
+    @apply text-[18px] leading-[26px] font-medium;
+  }
+
+  h6 {
+    @apply text-[16px] leading-[24px] font-medium;
+  }
+
+  body {
+    @apply text-nt-900;
+  }
+  .base-btn {
+    @apply h-12 px-7 py-3 flex-shrink-0 rounded-full text-body-base-str;
+  }
+
+  .small-btn {
+    @apply h-10 px-5 py-2 rounded-full  text-body-small-str;
+  }
+
+  .ghost-btn {
+    @apply px-3 py-2 rounded-full text-body-small-str;
+  }
+
+  .primary-btn {
+    @apply text-nt-50 bg-pm-500;
+  }
+
+  .primary-btn:hover {
+    @apply bg-pm-300;
+  }
+
+  .primary-btn:focus {
+    box-shadow: 0px 0px 6px 0px theme('colors.pm.500 / 80%');
+  }
+
+  .primary-btn:active {
+    @apply bg-pm-700;
+  }
+
+  .primary-btn:disabled {
+    @apply bg-nt-200 text-nt-50 cursor-not-allowed;
+  }
+
+  .primary-btn.ghost-btn {
+    @apply text-pm-500 bg-transparent;
+  }
+
+  .primary-btn.ghost-btn {
+    @apply text-pm-500 bg-transparent;
+  }
+
+  .primary-btn.ghost-btn:hover {
+    @apply text-pm-300 bg-transparent;
+  }
+
+  .primary-btn.ghost-btn:focus {
+    @apply text-pm-700 bg-transparent;
+  }
+
+  .primary-btn.ghost-btn:active {
+    box-shadow: 0px 0px 6px 0px theme('colors.pm.500 / 80%');
+  }
+
+  .primary-btn.ghost-btn:disabled {
+    @apply text-nt-250 bg-transparent cursor-not-allowed;
+  }
+
+  .secondary-btn {
+    @apply border border-nt-150 bg-nt-50;
+  }
+
+  .secondary-btn:hover {
+    @apply text-pm-300;
+  }
+
+  .secondary-btn:focus {
+    color: black;
+    box-shadow: 0px 0px 6px 0px theme('colors.pm.500 / 80%');
+  }
+
+  .secondary-btn:active .tertiary-btn:active {
+    @apply text-pm-700;
+  }
+
+  .secondary-btn.ghost-btn {
+    @apply border-none p-2 bg-none;
+  }
+
+  .secondary-btn.ghost-btn:hover {
+    @apply text-pm-700 border-none;
+  }
+
+  .secondary-btn.ghost-btn:focus {
+    color: black;
+    box-shadow: 0px 0px 6px 0px theme('colors.pm.500 / 80%');
+  }
+
+  .secondary-btn.ghost-btn:active {
+    @apply text-pm-700;
+  }
+
+  .secondary-btn:disabled {
+    @apply text-nt-250 cursor-not-allowed;
+  }
+
+  .secondary-btn.ghost-btn:disabled {
+    @apply text-nt-250 bg-transparent cursor-not-allowed;
+  }
+
+  .tertiary-btn {
+    @apply bg-pm-50 text-pm-500;
+  }
+
+  .tertiary-btn:hover {
+    @apply text-pm-300;
+  }
+  .tertiary-btn:focus {
+    @apply text-pm-500;
+    box-shadow: 0px 0px 6px 0px theme('colors.pm.500 / 80%');
+  }
+
+  .tertiary-btn:disabled {
+    @apply bg-nt-100 text-nt-250  cursor-not-allowed;
+  }
+}
+
+/* For Webkit-based browsers like Chrome, Safari */
+.scrollbar-transparent::-webkit-scrollbar {
+  padding: 8px;
+  width: 8px; /* Adjust width as needed */
+}
+
+.scrollbar-transparent::-webkit-scrollbar-track {
+  background: transparent; /* Makes the scrollbar track (background) transparent */
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Customize the thumb color and opacity */
+  border-radius: 4px;
+}
+
+/* For Firefox */
+.scrollbar-transparent {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+/* CSS Transition for Template Menu */
+.menu-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}

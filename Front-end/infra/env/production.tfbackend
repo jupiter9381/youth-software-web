@@ -1,0 +1,4 @@
+bucket = "pass-on-terraform-state-production"
+region = "ap-southeast-2"
+dynamodb_table = "pass-on-terraform-state-lock-production"
+kms_key_id = "arn:aws:kms:ap-southeast-2:767397783359:key/fab85c17-5b89-4ba5-a0cb-8fe6f5534e0b"
